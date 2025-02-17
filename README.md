@@ -35,7 +35,7 @@ Antes de instalar la aplicación, asegúrate de tener instalado:
 ### Pasos de Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/airbnbe.git
+   git clone https://github.com/ErickM12/ReactNativeELearn.git
    cd airbnbe
    ```
 2. Instala las dependencias:
