@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "@rneui/base";
 import Profile from "../modules/auth/screens/Profile";
 import HomeStack from "./stack/navigationLoggerStack/HomeStack";
+import TopFiveStack from "./stack/navigationLoggerStack/TopFiveStack";
 const Tab = createBottomTabNavigator();
 
 export default function NavigationLogger() {
@@ -28,6 +29,11 @@ export default function NavigationLogger() {
           options={{ title: "Inicio" }}
         />
         <Tab.Screen
+          name="TopFive"
+          component={TopFiveStack}
+          options={{ title: "Top 5" }}
+        />
+        <Tab.Screen
           name="Profile"
           component={Profile}
           options={{ title: "Perfil" }}
@@ -46,6 +52,9 @@ const getIconName = (routeName, focused) => {
       break;
     case "Profile":
       iconName = focused ? "account" : "account-outline";
+      break;
+    case "TopFive":
+      iconName = focused ? "trophy" : "trophy-outline";
       break;
   }
   return { iconName, iconType };
